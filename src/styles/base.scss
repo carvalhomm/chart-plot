@@ -1,0 +1,71 @@
+@import './variables.scss';
+
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    background-color: #fff;
+    color: $dark-font;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $primary-blue;
+    border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $primary-blue;
+}
+
+.app-base {
+    display: flex;
+    flex-direction: column;
+}
+
+.primary-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    box-shadow: $shadow-box;
+    transition: background-color .25s ease-in-out;
+    -webkit-transition: background-color .25s ease-in-out;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    color: #fff;
+    letter-spacing: .8px;
+    outline: 0;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+    &.remove {
+        background-color: $error;
+    }
+    &.add-new {
+        margin: auto;
+        background-color: $primary-blue;
+    }
+    &:disabled {
+        margin: auto;
+        cursor: default;
+        background-color: $dark-gray;
+    }
+    &:hover {
+        opacity: 1;
+    }
+}

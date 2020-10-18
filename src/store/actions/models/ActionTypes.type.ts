@@ -1,0 +1,1 @@
+export type ActionType = '' | 'INPUT_DATA';
